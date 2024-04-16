@@ -1,0 +1,12 @@
+[Unit]
+Description=Smart Device Relay
+After=network-online.target
+
+[Service]
+User=root
+ExecStart=/usr/bin/smart-device-relay -port=8123
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=default.target
